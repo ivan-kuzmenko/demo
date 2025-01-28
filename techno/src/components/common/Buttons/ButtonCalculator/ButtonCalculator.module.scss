@@ -1,0 +1,37 @@
+@import '../../../../styles/variables.scss';
+
+.button {
+  background-color: $color-gray-bg;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: $color-gray-ghost;
+
+    .buttonText {
+      color: $color-white;
+    }
+  }
+
+  &.active {
+    background-color: $color-blue;
+
+    .buttonText {
+      color: $color-white;
+    }
+  }
+
+  &Text {
+    font-size: 16px;
+    transition: $transition;
+
+    @media (max-width:$breakpoint-extra-large) {
+      font-size: 14px;
+    }
+  }
+}

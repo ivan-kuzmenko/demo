@@ -1,0 +1,143 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: $color-black;
+  min-height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+.title {
+  h2 {
+    color: $color-black;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+
+    b {
+      color: $color-white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    span {
+      color: $color-blue;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      &.product {
+        font-size: 28px;
+
+        @media (max-width: $breakpoint-extra-large) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    
+    @media (max-width: $breakpoint-extra-large) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  p {
+    font-size: 14px;
+    margin-top: 12px;
+    max-width: 610px;
+
+    span {
+      color: $color-blue;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.container {
+  max-width: $breakpoint-extra-large;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 20px;
+
+  @media (max-width: $breakpoint-extra-large) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: 380px) {
+    padding-inline: 10px;
+  }
+
+  @media (max-width: $breakpoint-extra-small) {
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-blue;
+  transition: $transition;
+  border-radius: 8px;
+}
+
+::-moz-scrollbar {
+  width: 10px;
+}
+
+::-moz-scrollbar-track {
+  background: transparent;
+}
+
+::-moz-scrollbar-thumb {
+  background: $color-blue;
+  transition: $transition;
+  border-radius: 8px;
+}
+
+@media (max-width: $breakpoint-large) {
+  ::-webkit-scrollbar-thumb,
+  ::-moz-scrollbar-thumb {
+    width: 4px;
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../../../styles/variables.scss";
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  &Slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px 45px;
+    background-color: $color-gray-bg;
+
+    &Image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

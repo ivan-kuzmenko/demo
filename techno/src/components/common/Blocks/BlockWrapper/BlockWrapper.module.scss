@@ -1,0 +1,67 @@
+@import "../../../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+
+  &.paddingTopNone {
+    padding-top: 0px;
+  }
+
+  &.paddingTopSm,
+  &.paddingTopSmMd {
+    padding-top: 40px;
+
+    @media (max-width: $breakpoint-medium) {
+      padding-top: 20px;
+
+      &.paddingTopSmMd {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  &.paddingTopMd {
+    padding-top: 100px;
+
+    @media (max-width: $breakpoint-large) {
+      padding-top: 60px;
+    }
+  }
+
+  &.paddingBottomNone {
+    padding-bottom: 0px;
+  }
+
+  &.paddingBottomSm,
+  &.paddingBottomSmMd {
+    padding-bottom: 40px;
+
+    @media (max-width: $breakpoint-medium) {
+      padding-bottom: 20px;
+
+      &.paddingBottomSmMd {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &.paddingBottomMd {
+    padding-bottom: 100px;
+
+    @media (max-width: $breakpoint-large) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &.white {
+    background-color: $color-white;
+  }
+
+  &.gray {
+    background-color: $color-gray-bg;
+  }
+
+  &.dark {
+    background-color: $color-black;
+  }
+}

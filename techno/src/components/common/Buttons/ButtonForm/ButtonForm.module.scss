@@ -1,0 +1,119 @@
+@import "../../../../styles/variables.scss";
+
+.button {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  border: 1px solid $color-white;
+  transition: $transition;
+  min-width: 160px;
+
+  &:hover {
+    .buttonContainerArrow {
+      @extend %arrow-rotate;
+    }
+  }
+
+  @extend %disabled-cursor;
+
+  &Container {
+    width: 38px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: $transition;
+
+    &Arrow {
+      width: 13px;
+      height: 15px;
+      cursor: pointer;
+      transition: $transition;
+
+      & path {
+        transition: $transition;
+      }
+    }
+
+    @media (max-width: $breakpoint-extra-large) {
+      width: 30px;
+
+      &Arrow {
+        width: 9px;
+        height: 11px;
+      }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+      width: 37px;
+
+      &Arrow {
+        width: 13px;
+        height: 15px;
+      }
+    }
+  }
+
+  &Text {
+    color: $color-white;
+    font-size: 14px;
+    margin-right: 12px;
+    transition: $transition;
+  }
+}
+
+.white {
+  border: 1px solid $color-white;
+
+  &:hover {
+    background-color: $color-white;
+
+    .buttonContainer {
+      background-color: $color-black;
+
+      .buttonContainerArrow path {
+        fill: $color-white;
+      }
+    }
+
+    .buttonText {
+      color: $color-black;
+    }
+  }
+}
+
+.black {
+  border: 1px solid $color-black;
+  background-color: $color-white;
+
+  &:hover {
+    background-color: $color-black;
+    border: 1px solid $color-black;
+
+    .buttonContainer {
+      background-color: $color-white;
+
+      .buttonContainerArrow path {
+        fill: $color-black;
+      }
+    }
+
+    .buttonText {
+      color: $color-white;
+    }
+  }
+
+  .buttonContainer {
+    background-color: $color-black;
+  }
+  .buttonText {
+    color: $color-black;
+  }
+}

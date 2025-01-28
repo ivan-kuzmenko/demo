@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+.error {
+
+  &Block {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: $breakpoint-medium) {
+      flex-direction: column-reverse;
+    }
+
+    &Buttons,
+    &Empty {
+      flex-basis: 50%;
+    }
+
+    &Buttons {
+      display: flex;
+      gap: 10px;
+
+      @media (max-width: $breakpoint-extra-large) {
+        flex-direction: column;
+      }
+    }
+  }
+}

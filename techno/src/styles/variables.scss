@@ -1,0 +1,66 @@
+$color-white: #fff;
+$color-black: #001f32;
+$color-blue: #004fff;
+$color-blue-dark: #31306E;
+$color-gray: #b6b6b6;
+$color-gray-bg: #f6f7f9;
+$color-gray-ghost: #c8c8c8;
+
+$transition: 0.15s linear;
+$transition-medium: 0.5s linear;
+
+$breakpoint-extra-small: 320px;
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-extra-large: 1320px;
+$breakpoint-mobile: 860px;
+
+%arrow-rotate {
+  transition: $transition;
+  transform: rotate(51deg);
+}
+
+%arrow-rotate-circle {
+  transition: $transition;
+  transform: rotate(47deg);
+}
+
+%hover-up-animation {
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+%hover-scale-animation {
+  transition: $transition;
+  transform: scale(1.05);
+}
+
+%disabled-cursor {
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+%blur-animation {
+  backdrop-filter: blur(3px);
+  transition: $transition;
+
+  &:hover {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes smoothContainer {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

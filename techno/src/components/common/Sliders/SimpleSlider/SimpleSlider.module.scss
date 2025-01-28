@@ -1,0 +1,108 @@
+@import "@/styles/variables";
+
+.slide {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.imageWrapper {
+	position: relative;
+	height: 400px;
+	@media(max-width: $breakpoint-extra-large) {
+		height: 277px;
+	}
+}
+.image {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.arrow {
+	width: 60px !important;
+	height: 60px !important;
+	@media(max-width: $breakpoint-extra-large) {
+		width: 40px !important;
+		height: 40px !important;
+		bottom: 22px !important;
+		left: 22px !important;
+	}
+}
+.textWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
+}
+.title {
+	font-weight: 500;
+	font-size: 16px;
+	color: $color-black;
+	text-transform: uppercase;
+	@media(max-width: $breakpoint-extra-large) {
+		font-size: 14px;
+	}
+}
+.description {
+	font-weight: 300;
+	font-size: 14px;
+	color: $color-black;
+	@media(max-width: $breakpoint-extra-large) {
+		font-size: 12px;
+	}
+}
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-top: 25px;
+
+	@media(max-width: $breakpoint-extra-large) {
+		gap: 5px;
+		margin-top: 15px;
+	}
+
+	@media (max-width: $breakpoint-small) {
+		justify-content: flex-start;
+		gap: 10px;
+	}
+}
+.btnLeft, .btnRight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color-blue;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: $transition;
+	border: 1px solid transparent;
+
+	&:hover {
+		background-color: $color-white;
+		border-color: $color-blue;
+
+		& svg {
+			transform: translateX(-2px);
+
+			& path {
+				fill: $color-blue;
+			}
+		} 
+	}
+
+	> svg {
+		transition: $transition;
+		user-select: none;
+	}
+	@media(max-width: $breakpoint-extra-large) {
+		width: 32px;
+		height: 32px;
+	}
+}
+.btnRight {
+	transform: rotate(180deg);
+}

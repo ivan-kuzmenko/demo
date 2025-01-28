@@ -1,0 +1,44 @@
+@import "../../../../styles/variables.scss";
+
+.form {
+  width: 100%;
+  height: 40px;
+  background-color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px 0 17px;
+  border-radius: 28px;
+
+  &Input {
+    color: $color-black;
+    font-size: 12px;
+
+    &::placeholder {
+      color: $color-gray;
+      font-size: 12px;
+    }
+  }
+
+  &Button {
+    background-color: $color-white;
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1px solid $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &Image {
+      transition: $transition;
+    }
+
+    &:hover {
+      .formButtonImage {
+        transform: translateX(3px);
+      }
+    }
+  }
+}

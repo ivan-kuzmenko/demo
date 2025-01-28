@@ -1,0 +1,102 @@
+@import "../../../../styles/variables.scss";
+
+.select {
+  cursor: pointer;
+  transition: $transition;
+  background-color: $color-gray-bg;
+  padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid transparent;
+  position: relative;
+
+  &.active {
+    border: 2px solid $color-blue;
+  }
+
+  &.listShow {
+    .selectArrow {
+      transform: rotate(90deg);
+    }
+
+    .selectList {
+      transform: translateY(0px);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    background-color: $color-gray-ghost;
+
+    .selectInput::placeholder {
+      color: $color-white;
+    }
+  }
+
+  &Arrow {
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    background-color: $color-blue;
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+
+    @media (max-width: 380px) {
+      width: 25px;
+      top: 13px;
+    }
+
+    &Icon {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &Input {
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+
+    &::placeholder {
+      transition: $transition;
+      font-size: 16px;
+      color: $color-gray;
+    }
+
+    @media (max-width: $breakpoint-extra-large) {
+      font-size: 14px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &List {
+    position: absolute;
+    z-index: 10;
+    top: 62px;
+    left: 0;
+    border-radius: 5px;
+    background-color: $color-gray-bg;
+    width: 100%;
+    overflow: hidden;
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+
+    & li {
+      border-bottom: 1px solid $color-gray;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../../styles/variables.scss";
+
+.button {
+  width: 100%;
+  min-height: 60px;
+  border-radius: 10px;
+  background-color: $color-gray-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-gray;
+  cursor: pointer;
+  transition: $transition;
+  padding-inline: 10px;
+
+  &:disabled {
+    background-color: $color-gray;
+    color: $color-white;
+    @extend %disabled-cursor;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: $color-gray-ghost;
+    color: $color-white;
+  }
+
+  &.activeButton {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+}

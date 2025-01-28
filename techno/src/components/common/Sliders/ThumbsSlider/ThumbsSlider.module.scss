@@ -1,0 +1,172 @@
+@import "@/styles/variables";
+
+.swiperContainer {
+  position: relative;
+}
+.imageWrapper {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  height: 400px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: $breakpoint-extra-large) {
+    height: 324px;
+  }
+}
+.swiper {
+  display: flex;
+  justify-content: center;
+  width: 820px;
+  height: auto;
+  border-radius: 10px;
+  @media (max-width: $breakpoint-extra-large) {
+    width: 72%;
+  }
+  @media (max-width: $breakpoint-large) {
+    width: 60%;
+  }
+  @media (max-width: $breakpoint-medium) {
+    width: 100%;
+  }
+}
+.slide {
+}
+.textWrapper {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $color-black;
+  letter-spacing: 0.01em;
+  @media (max-width: $breakpoint-extra-large) {
+    font-size: 14px;
+  }
+}
+.goToCatalog {
+  font-size: 14px;
+  color: #808080;
+  letter-spacing: 0.01em;
+  @media (max-width: $breakpoint-extra-large) {
+    font-size: 12px;
+  }
+}
+.pagination {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  height: auto;
+  @media (max-width: $breakpoint-medium) {
+    bottom: -26px;
+  }
+}
+.bullet {
+  display: block;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  &Active {
+    background-color: #001f32;
+  }
+  @media (max-width: $breakpoint-medium) {
+    width: 6px;
+    height: 6px;
+  }
+}
+.thumbs {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  @media (max-width: $breakpoint-medium) {
+    display: none;
+  }
+}
+.thumbLeft,
+.thumbRight {
+  width: 203px;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+  @media (max-width: $breakpoint-extra-large) {
+    width: 12.5%;
+    height: 46%;
+  }
+  @media (max-width: $breakpoint-large) {
+    width: 17.5%;
+    height: 46%;
+  }
+}
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  filter: brightness(32%);
+}
+.arrow {
+  top: 42%;
+  left: 42%;
+  width: 40px;
+  height: 40px;
+  @media (max-width: $breakpoint-extra-large) {
+    width: 32px;
+    height: 32px;
+    top: 40%;
+    left: 40%;
+  }
+}
+.arrowAtImage {
+  width: 60px;
+  height: 60px;
+  bottom: 36px;
+  left: 36px;
+  img {
+    width: auto;
+    height: auto;
+  }
+  @media (max-width: $breakpoint-extra-large) {
+    width: 40px;
+    height: 40px;
+    bottom: 22px;
+    left: 22px;
+  }
+  @media (max-width: 550px) {
+    bottom: unset;
+    left: unset;
+    top: 9%;
+    right: 6.5%;
+    width: 60px;
+    height: 60px;
+  }
+}

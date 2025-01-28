@@ -1,0 +1,195 @@
+@import "../../../../styles/variables.scss";
+
+.link {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  transition: $transition;
+
+  &:hover {
+    .linkButtonArrow {
+      @extend %arrow-rotate;
+    }
+  }
+
+  &.headerButton {
+    padding: 6px;
+    border: 1px solid $color-black;
+
+    .linkButton {
+      background-color: $color-blue;
+      width: 28px;
+
+      .linkButtonArrow {
+        width: 13px;
+        height: 15px;
+      }
+
+      @media (max-width: $breakpoint-extra-large) {
+        width: 22px;
+
+        .linkButtonArrow {
+          width: 9px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  &Button {
+    width: 38px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: $transition;
+
+    &Arrow {
+      width: 13px;
+      height: 15px;
+      cursor: pointer;
+      transition: $transition;
+
+      & path {
+        transition: $transition;
+      }
+    }
+
+    @media (max-width: $breakpoint-extra-large) {
+      width: 30px;
+
+      &Arrow {
+        width: 9px;
+        height: 11px;
+      }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+      width: 37px;
+
+      &Arrow {
+        width: 13px;
+        height: 15px;
+      }
+    }
+  }
+
+  &Text {
+    font-size: 14px;
+    margin-right: 12px;
+    transition: $transition;
+  }
+}
+
+.blue {
+  border: 1px solid $color-black;
+
+  &:hover {
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+
+    .linkButton {
+      background-color: $color-white;
+    
+      .linkButtonArrow path {
+        fill: $color-blue;
+      }
+    }
+
+    .linkText {
+      color: $color-white;
+    }
+  }
+
+  .linkButton {
+    background-color: $color-blue;
+  }
+}
+
+.white {
+  border: 1px solid $color-white;
+
+  &:hover {
+    background-color: $color-white;
+
+    .linkButton {
+      background-color: $color-black;
+    
+      .linkButtonArrow path {
+        fill: $color-white;
+      }
+    }
+
+    .linkText {
+      color: $color-black;
+    }
+  }
+
+  .linkButton {
+    background-color: $color-white;
+  }
+  .linkText {
+    color: $color-white;
+  }
+}
+
+.whiteBlue {
+  border: 1px solid $color-blue;
+  background-color: $color-blue;
+
+  &:hover {
+    background-color: $color-white;
+
+    .linkButton {
+      background-color: $color-blue;
+    
+      .linkButtonArrow path {
+        fill: $color-white;
+      }
+    }
+
+    .linkText {
+      color: $color-blue;
+    }
+  }
+
+  .linkButton {
+    background-color: $color-white;
+  }
+  .linkText {
+    color: $color-white;
+  }
+}
+
+
+.black {
+  border: 1px solid $color-black;
+
+  &:hover {
+    background-color: $color-black;
+    border: 1px solid $color-black;
+
+    .linkButton {
+      background-color: $color-white;
+    
+      .linkButtonArrow path {
+        fill: $color-black;
+      }
+    }
+
+    .linkText {
+      color: $color-white;
+    }
+  }
+
+  .linkButton {
+    background-color: $color-black;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../styles/variables.scss";
+
+.header {
+  &Wrapper > div {
+    border-bottom: 1px solid $color-gray;
+  }
+}
+
+.mobileWrapper {
+  display: none;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .headerWrapper {
+    display: none;
+  }
+  .mobileWrapper {
+    display: block;
+  }
+}

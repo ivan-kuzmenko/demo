@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  font-size: 14px;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: 12px;
+  }
+
+  &Parent {
+    text-decoration: underline;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}

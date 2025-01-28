@@ -1,0 +1,78 @@
+@import "../../../../styles/variables.scss";
+
+.wrapper {
+  cursor: pointer;
+  transition: $transition;
+  background-color: $color-gray-bg;
+  padding: 15px 40px 15px 20px;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid transparent;
+
+  @media (max-width: $breakpoint-extra-large) {
+    padding: 15px 20px 15px 20px;
+  }
+
+  &.active {
+    border: 2px solid $color-blue;
+  }
+
+  &:hover {
+    background-color: $color-gray-ghost;
+
+    .wrapperInput::placeholder {
+      color: $color-white;
+    }
+  }
+
+  &Input {
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px; 
+    
+    &::placeholder {
+      transition: $transition;
+      font-size: 16px;
+      color: $color-gray;
+    }
+
+    @media (max-width: $breakpoint-extra-large) {
+      font-size: 14px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &Buttons {
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+
+    display: flex;
+    flex-direction: column;
+
+    &Plus,
+    &Minus {
+      @extend %disabled-cursor;
+
+      width: 20px;
+      aspect-ratio: 1 / 1;
+      cursor: pointer;
+    }
+
+    &Plus:disabled {
+      opacity: 0.5;
+    }
+
+    &Minus:disabled {
+      opacity: 0.5;
+    }
+
+    &MinusIcon {
+      transform: rotate(180deg);
+    }
+  }
+}

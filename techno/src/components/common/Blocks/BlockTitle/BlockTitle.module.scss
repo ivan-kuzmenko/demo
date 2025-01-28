@@ -1,0 +1,35 @@
+@import "../../../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  @media (max-width: $breakpoint-medium) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:has(.leftExist) {
+      gap: 30px;
+    }
+  }
+
+  &Left,
+  &Right {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    &Left {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .leftNotExist {
+    display: none;
+  }
+}

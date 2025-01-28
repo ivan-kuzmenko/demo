@@ -1,0 +1,52 @@
+@import "../../../../styles/variables.scss";
+
+.arrowWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  bottom: 36px;
+  left: 36px;
+  border-radius: 100%;
+  border: 1px solid white;
+  cursor: pointer;
+  
+  @extend %blur-animation;
+}
+
+.arrow {
+  height: auto;
+  width: auto;
+  transition: $transition;
+
+  &.big {
+    width: 23px;
+    height: 23px;
+  }
+}
+.right {
+  transform: rotate(180deg);
+}
+.up {
+  transform: rotate(90deg);
+}
+.down {
+  transform: rotate(-90deg);
+}
+.leftUp {
+  transform: rotate(45deg);
+}
+.leftDown {
+  transform: rotate(-45deg);
+}
+.rightUp {
+  transform: rotate(135deg);
+}
+.rightDown {
+  transform: rotate(225deg);
+}
+.blur {
+  backdrop-filter: blur(5px);
+}

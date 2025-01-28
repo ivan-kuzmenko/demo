@@ -1,0 +1,129 @@
+@import "@/styles/variables";
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+.label {
+  font-size: 16px;
+  color: #808080;
+  text-transform: uppercase;
+}
+.selectWrapper {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.select {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $color-gray;
+  padding-left: 20px;
+  height: 100%;
+}
+.arrowWrapper {
+  position: absolute;
+  display: flex;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(140deg);
+  justify-content: center;
+  align-content: center;
+  width: 37px;
+  height: 37px;
+  background-color: $color-blue;
+  border-radius: 100%;
+  transition: .2s ease-out;
+  &Active {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+.arrow {
+  width: 13px;
+  height: auto;
+}
+.options {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #808080;
+  position: absolute;
+  z-index: 2;
+  bottom: -15px;
+  left: 0;
+  transform: translateY(100%);
+  transition: .2s ease;
+  width: 50%;
+  min-width: 222px;
+  opacity: 0;
+  pointer-events: none;
+  &Active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 21px 19px;
+  font-size: 16px;
+  color: $color-black;
+  text-transform: uppercase;
+  border-bottom: 1px solid #808080;
+  cursor: pointer;
+  &:last-child {
+    border-bottom: unset;
+  }
+}
+//inputsOption {
+//
+//}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+}
+.inputWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.inputLabel {
+  font-size: 14px;
+  color: #808080;
+  text-transform: lowercase;
+}
+.input {
+  width: 100%;
+  background-color: #D9D9D9;
+  color: #808080;
+  padding: 10px 11px;
+  border-radius: 5px;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.button {
+  width: auto;
+  padding: 9px 10px;
+  color: #808080;
+  font-size: 14px;
+  background-color: $color-gray-bg;
+  border-radius: 5px;
+}

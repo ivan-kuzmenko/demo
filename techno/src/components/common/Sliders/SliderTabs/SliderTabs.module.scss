@@ -1,0 +1,60 @@
+@import "../../../../styles/variables.scss";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &Tabs {
+    display: flex;
+  }
+
+  &Slide {
+    width: auto !important;
+  }
+
+  &Controls {
+    margin-top: 8px;
+    justify-content: flex-end;
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: $breakpoint-extra-large) {
+      gap: 5px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      display: none;
+    }
+
+    &Button {
+      width: 40px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 1px solid $color-black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        background-color: $color-blue;
+      }
+
+      @media (max-width: $breakpoint-extra-large) {
+        width: 30px;
+
+        &Left,
+        &Right {
+          width: 11px;
+          height: 9px;
+        }
+      }
+
+      &Left {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
